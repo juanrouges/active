@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head><!-- head represents a collection of metadata about the document, including links to or definitions of scripts and style sheets -->
+    <!-- Meta Tags represent any metadata information which cannot be represented by one of the other meta-related elements-->
+     
+    <!-- Base element specifies the base URL to use for all relative URLs contained within a document -->
+    <!--<base href="http://localhost/orangesopa.com/">-->
+    <base href="http://orangesopa.com/">
+
+    <!-- Favicons -->
+    <!-- TODO<link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">-->
+
+    <!-- Page Title defines the title of the document, shown in a browser's title bar or on the page's tab.-->
+    <title>OrangeSopa.com</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+      
+    <!-- External Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+    
+    <!-- Font Awesome Icons -->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this page -->
+    <link href="css/carousel.css" rel="stylesheet">
+    
+    <style type="text/css"></style>
+    <style id="clearly_highlighting_css" type="text/css">
+      /* selection */ 
+      html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } 
+      html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ 
+      html.clearly_highlighting_enabled {    
+        /* cursor and hot-spot position -- requires a default cursor, after the URL one */    
+        cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; 
+      } 
+      /* highlight tag */ 
+      em.clearly_highlight_element {    
+        font-style: inherit !important; 
+        font-weight: inherit !important;    
+        background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    
+        background-repeat: repeat-x; 
+        background-position: top left; 
+        background-size: 100% 100%; 
+      } 
+      /* the delete-buttons are positioned relative to this */ 
+      em.clearly_highlight_element.clearly_highlight_first { position: relative; } 
+      /* delete buttons */ 
+      em.clearly_highlight_element a.clearly_highlight_delete_element {    
+        display: none; 
+        cursor: pointer;    
+        padding: 0; 
+        margin: 0; 
+        line-height: 0;    
+        position: absolute; 
+        width: 34px; 
+        height: 34px; 
+        left: -17px; 
+        top: -17px;   
+        background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); 
+        background-repeat: no-repeat; 
+        background-position: 0px 0px; 
+      } 
+      em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } 
+
+      /* retina */ 
+      @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }
+            em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } 
+    </style>
+    <style id="holderjs-style" type="text/css"></style>
+    <style>
+      [touch-action="none"]{ -ms-touch-action: none; touch-action: none; }
+      [touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }
+      [touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }
+      [touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
+    </style>
+
+  </head>
+
+  <body>
+    
+    <div class="wrapper">
+        
+      <!-- Navbar -->
+      <!-- ========================================================================= -->
+      <header class="main-header">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <div id="navbar-logo">
+                <img src="img/header-logo-circle.png" class="nobar" alt="logo" />
+                <img src="img/header-logo-inverted.png" class="withbar" alt="logo" />
+              </div><!-- /.navbar-logo -->
+            </div>
+            <div class="collapse navbar-collapse pull-right" >
+              <ul class="nav navbar-nav">  
+                <li><a href="#contact" type="button" class="social" data-toggle="modal" role="button"><i class="fa fa-phone fa-2x fa-fw" style="vertical-align: middle;"></i></a></li>
+                <li><a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Flocalhost%2Forangesopa.com%2Fd.html&amp;region=follow_link&amp;screen_name=orangesopa&amp;tw_p=followbutton&amp;variant=2.0" type="button" id="follow-buttom" class="social" role="button"><i class="fa fa-twitter-square fa-2x fa-fw" style="vertical-align: middle;"></i></a></li>
+                <!--li><a href="#contact" type="button" class="social" data-toggle="modal" role="button"><i class="fa fa-facebook-square fa-2x fa-fw" style="vertical-align: middle;"></i></a></li-->
+                <!--<li><a href="#contact" type="button" class="social" data-toggle="modal" role="button"><i class="fa fa-google-plus-square fa-2x fa-fw" style="vertical-align: middle;"></i></a></li-->
+                <li><a href="https://www.linkedin.com/company/orangesopa" type="button" class="social" data-toggle="modal" role="button"><i class="fa fa-linkedin-square fa-2x fa-fw" style="vertical-align: middle;"></i></a></li>
+                <li><a href="#contact" type="button" class="social" data-toggle="modal" role="button"><i class="fa fa-envelope fa-2x fa-fw" style="vertical-align: middle;"></i></a></li>
+              </ul>
+            </div><!-- /.navbar buttons -->
+
+          </div><!-- /.container -->
+        </nav>
+      </header>
+      
+      <!-- Carousel -->
+      <!-- ========================================================================= -->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+          <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+          <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+        </ol>
+      
+        <!-- Items -->
+        <div class="carousel-inner">
+          <div class="item active" style="width: 100%; float: left; margin-right: -100%; position: relative;">
+            <div style="background-image: url('img/booth-carousel-wide.png');"></div>
+            <div class="container" style="height:100%;">
+              <div class="carousel-caption">
+                <h1>Creative Solutions.</h1>
+                <p>Design. Web. Print.</p>
+              </div>
+            </div>
+          </div>
+          <div class="item" style="width: 100%; float: left; margin-right: -100%; position: relative; ">
+            <div style="background-image: url('img/clownshoes-carousel-wide.png');"></div>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Stand Out!</h1>
+                <p>With the proper design and marketing your business can stand out from the rest.</p>
+              </div>
+            </div>
+          </div>
+          <div class="item" style="width: 100%; float: left; margin-right: -100%; position: relative;">
+            <div style="background-image: url('img/missingpiece-carousel-wide.png');"></div>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>The Missing Piece.</h1>
+                <p>Customers start their search on the web. A high impact website is the missing piece of your marketing strategy.</p>
+              </div>
+            </div>
+          </div>
+          <div class="item" style="width: 100%; float: left; margin-right: -100%; position: relative;">
+            <div style="background-image: url('img/frontofcrowd-carousel-wide.png');"></div>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Get Ahead.</h1>
+                <p>The right website and marketing materials can get your business ahead of your competition. Ask us how.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="left carousel-control" href="./#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="./#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>
+      <!-- /.carousel -->
+
+
+      <!-- Marketing messaging and featurettes -->
+      <!-- ========================================================================= -->
+      <!-- We'll wrap this in a 100% width div to completely cover carousel on scroll up -->
+      <div id="featurettes">
+        
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+        <div class="container marketing">
+          <!-- Down Arrow Glyph -->
+          <div class="col-md-12" style="font-size:48px; text-align:center;"><span class="glyphicon glyphicon-chevron-down"></span></div>
+          <!-- START THE FEATURETTES -->
+          <div class="row featurette">
+            <div class="col-md-5">
+              <img class="featurette-image img-responsive" alt="500x500" src="img/grow-featurette.png">
+            </div>
+            <div class="col-md-7">
+              <h2 class="featurette-heading">Grow.<span class="text-muted">With us.</span></h2>
+              <p class="lead">Growth today requires a strong web presence and properly aligned print materials. Let our team help you grow your business.</p>
+            </div>
+
+          </div>
+        
+          <hr class="featurette-divider"><!-- featurette-divider - - - - - - - - - - - - -->
+      
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">We have the people.<span class="text-muted">Let us help you.</span></h2>
+              <p class="lead">Our team of experienced graphic designers, web developers, photographers, sales and marketing professionals are here ready to help you create a mind-blowing, complete marketing package.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-responsive" alt="500x500" src="img/people-featurette.png">
+            </div>
+          </div>
+
+          <hr class="featurette-divider"><!-- featurette-divider - - - - - - - - - - - - -->
+
+          <div class="row featurette">
+            <div class="col-md-5">
+              <img class="featurette-image img-responsive" alt="500x500" src="img/cents-featurette.png">
+            </div>
+            <div class="col-md-7">
+              <h2 class="featurette-heading">Invest In Your Business.<span class="text-muted">And get great returns.</span></h2>
+              <p class="lead">We've helped companies small, large, and very large create a variety of solutions that all have one thing in common: great value. Let us tell you more about how we can help you acheive great returns on a great investment.</p>
+            </div>
+          </div>
+
+          <hr class="featurette-divider"><!-- featurette-divider - - - - - - - - - - - - -->
+        </div><!-- /.container marketing -->
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.featurettes-->
+      
+      
+      <!-- Services Offered -->
+      <!-- ========================================================================= -->
+      <!-- We'll wrap this in a 100% width div to completely cover carousel on scroll up -->
+      <div id="services">
+        
+        <div class="container marketing">
+          
+          <!-- BEGIN FOUR COLUMN LINKS --> 
+          <div class="row">
+            <!-- design -->
+            <div class="col-lg-4">
+              <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="img/design-circle.png">
+              <h2>Design</h2>
+              <p>Whether your needs are complex or simple we can help. Our graphic designers and web design professionals can help you create a compelling website with as much or as little functionality as needed.</p>
+            </div><!-- /.col-lg-4 design -->
+            
+            <!-- hosting -->
+            <div class="col-lg-4">
+              <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="img/hosting-circle.png">
+              <h2>Hosting</h2>
+              <p>We host your site making sure it is always online. Your site shouln't go down or slow down when it gets popular. We can help optimize your site for phones, tablets and all screen sizes.</p>
+            </div><!-- /.col-lg-4 hosting -->
+        
+            <!-- photography -->
+            <div class="col-lg-4">
+              <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="img/photography-circle.png">
+              <h2>Photography</h2>
+              <p>Amateur photographs aren't enough to get you noticed. Our professional photographers know how to help you create the perfect look whether it is for your website, a business card, a poster or a menu.</p>
+            </div><!-- /.col-lg-4 photography -->
+          </div><!-- /.row 1 -->
+     
+          <div class="row">
+            <!-- print -->
+            <div class="col-lg-4">
+              <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="img/print-circle.png">
+              <h2>Print</h2>
+              <p>In today's web driven world it is easy to overlook the power of print. Let us help you bring your printed materials up-to-date. We create the flyers, business cards, menus, posters that help you get noticed and stay remembered.</p>
+            </div><!-- /.col-lg-4 print -->
+            <!-- email -->
+            <div class="col-lg-4">
+              <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="img/email-marketing-circle.png">
+              <h2>E-Mail Markerting</h2>
+              <p>Both your clients and potential clients need to be kept up-to-date with your promotions and changes. Let us help you manage mass emails to your base.</p>
+            </div><!-- /.col-lg-4 print -->
+            <!-- SEO -->
+            <div class="col-lg-4">
+              <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="img/seo-circle.png">
+              <h2>SEO</h2>
+              <p>We start our purchases today with a web search. We can help make sure your company comes up first.</p>
+            </div><!-- /.col-lg-4 seo -->
+          </div><!-- /.row 2 -->
+          <!-- /END FOUR COLUMN LINKS -->
+        
+        </div>
+        <!-- /.container marketing -->
+      
+      </div>
+        
+
+      <!-- FOOTER -->
+      <!-- ========================================================================= -->
+      <div id="footer">
+        <footer>
+        <div class="container">
+          <p class="pull-right"><a href="#">Back to top</a></p>
+          <p><span class="glyphicon glyphicon-copyright-mark"></span> 2014 OrangeSopa. <a href="#">Terms</a></p>
+        </div><!-- /.container -->
+      </footer>
+      </div>
+    
+      
+      <!-- Contact Us Modal -->
+      <!-- ========================================================================= -->
+      <!-- This modal will launch on the Contact Us button -->
+      <div id="contact" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contactLabel" aria-hidden="false">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3 id="contactLabel">Contact Us</h3>
+        </div><!-- /.modal-header -->
+        <div class="modal-body">
+
+          <form id="contactus" class="form-horizontal" action="php/contactus.php" method="post">
+
+            <div class="form-group"><!-- name -->
+              <label for="inputName" class="col-sm-2 control-label">Name</label>
+              <div class="col-sm-10"><input form="contactus" type="text" name="inputName" id="inputName" class="formcontrol" placeholder="your name goes here..." size="40"></div>
+            </div><!-- /.form-group (name) -->
+
+            <div class="form-group"><!-- email address -->
+              <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10"><input form="contactus" type="email" name="inputEmail" id="inputEmail" class="formcontrol" placeholder="your address goes here..." size="40"></div>
+            </div><!-- /.form-group (email) -->
+
+            <div class="form-group">
+              <label for="inputMessage" class="col-sm-2 control-label">Message</label>
+              <div class="col-sm-10"><textarea form="contactus" rows="5" name="inputMessage" id="inputMessage" class="formcontrol" placeholder="your message goes here..." cols="50" style="height:200px;"></textarea></div>
+            </div><!-- /.form-group (message) -->
+
+          </form><!-- /form -->
+        </div><!-- /.modal-body -->
+        <div class="modal-footer">
+          <a href="#" class="btn">Close</a>
+          <button type="submit" class="btn btn-primary" form="contactus">Submit</button>
+        </div><!-- /.modal-footer -->
+      </div>
+      
+      
+      
+    </div><!-- /.wrapper --> 
+    <!-- Bootstrap core JavaScript -->
+    <!-- ========================================================================= -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+    <script src="js/jquery.color-2.1.0.js"></script>
+    <script src="js/scroll.js"></script>
+  
+
+</body>
+</html>
