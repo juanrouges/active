@@ -17,7 +17,7 @@ h1, h2, h3 {
 }
 #footer {
   min-height: 60px;
-  background-color: #31335E;
+  background-color: #2f3192;
   height: 60px;
 }
 
@@ -106,7 +106,7 @@ h1, h2, h3 {
   width:305px; 
   height:422px; 
   position: absolute;
-	top: -300px;
+  top: -300px;
   left: 0px;
  }
 .call-to-action button {
@@ -153,18 +153,15 @@ h1, h2, h3 {
   padding-top: 75px;
 }
 .product .product-item{
-	position: relative;
-	border: 1px solid #eaeaea;
-	border-radius: 6px;
-	background: #fff;
+	position: relative;	
+	border-radius: 6px;	
 }
 .product .product-item img {
 	position: absolute;
 	top: -45px;
 	width: 25%;
 	max-width: 255px;
-  
-}
+	}
 .product .product-item h3, .product .product-item p { margin-left: 100px; padding-right: 20px;}
 .product .product-item h3{	
 	padding-top: 10px;
@@ -172,7 +169,7 @@ h1, h2, h3 {
 }
 .product .product-item p {
 	padding-bottom: 25px;
-	font-size: 13px;
+	font-size: 16px;
 	color: #9a9a9a;
 }
 
